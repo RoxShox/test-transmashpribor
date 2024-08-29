@@ -1,0 +1,37 @@
+.my-custom-select {
+	max-width: 370px;
+	width: 100%;
+	.select__control {
+		background-color: var(--primary-dark);
+		border: none;
+		height: 55px;
+		border-radius: 15px;
+		box-shadow: none;
+		&:hover {
+			border-color: transparent;
+		}
+	}
+
+	.select__option--is-focused {
+		background-color: rgb(37, 39, 41);
+	}
+
+	.select__indicator-separator {
+		width: 0;
+	}
+	.select__input-container,
+	.select__single-value,
+	.select__placeholder {
+		font-weight: 400;
+		font-size: 16px;
+		letter-spacing: 0.05em;
+		color: var(--main-color);
+	}
+	.select__indicator {
+		color: white;
+	}
+	.select__menu {
+		background: rgb(110, 106, 106);
+		border-radius: 10px;
+	}
+}

@@ -1,0 +1,10 @@
+.offer {
+	padding: 40px 0;
+	background: var(--primary-dark);
+	&__description {
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 170%;
+		color: var(--primary-light);
+	}
+}

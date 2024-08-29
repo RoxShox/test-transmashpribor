@@ -1,0 +1,35 @@
+.menu__list_wrap {
+	@media (max-width: 600px) {
+		width: 100%;
+	}
+}
+
+.menu__list {
+	display: flex;
+	align-items: center;
+	column-gap: 16px;
+	@media (max-width: 600px) {
+		width: 100%;
+		position: relative;
+		flex-direction: column;
+		padding: 20px 0;
+		row-gap: 20px;
+		&::after {
+			content: "";
+			position: absolute;
+			width: 120%;
+			height: 1px;
+			background-color: #1c1c1c;
+			bottom: 0;
+			margin: 0 -25px;
+		}
+	}
+}
+
+.menu__item {
+	transition: color 0.3s;
+	&:hover {
+		color: var(--decor-color);
+		transition: color 0.3s;
+	}
+}

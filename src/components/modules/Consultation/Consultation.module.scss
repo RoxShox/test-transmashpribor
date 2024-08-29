@@ -1,0 +1,56 @@
+.consultation {
+	padding: 88px 0 105px;
+	position: relative;
+	@media (max-width: 768px) {
+		padding: 40px 0;
+	}
+
+	&__bg_decor {
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-image: url(../../../assets/img/consultation-decor.svg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 438px;
+		width: 100%;
+		z-index: -1;
+		@media (max-width: 1024px) {
+			display: none;
+		}
+		@media (max-width: 400px) {
+			display: block;
+			background-image: url(../../../assets/img/mobile-consultation-decor.svg);
+			height: 459px;
+			width: 100%;
+			top: -180px;
+		}
+	}
+	&__title {
+		font-size: 46px;
+		margin-bottom: 20px;
+		text-align: center;
+		@media (max-width: 768px) {
+			font-size: 32px;
+		}
+		@media (max-width: 500px) {
+			font-size: 20px;
+			margin-bottom: 10px;
+		}
+	}
+	&__subtitle {
+		font-weight: 400;
+		font-size: 24px;
+		text-align: center;
+		max-width: 587px;
+		width: 100%;
+		margin: 0 auto 40px;
+		@media (max-width: 768px) {
+			font-size: 18px;
+		}
+		@media (max-width: 500px) {
+			font-size: 14px;
+			margin: 0 auto 20px;
+		}
+	}
+}

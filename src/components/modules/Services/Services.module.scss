@@ -1,0 +1,82 @@
+@import "../../../style/mixins.scss";
+.services {
+	&__title {
+		font-size: 46px;
+		text-align: center;
+		margin-bottom: 20px;
+		@media (max-width: 768px) {
+			font-size: 32px;
+		}
+		@media (max-width: 500px) {
+			font-size: 20px;
+			margin-bottom: 15px;
+		}
+	}
+	&__subtitle {
+		font-size: 24px;
+		text-align: center;
+		font-weight: 400;
+		max-width: 972px;
+		margin: 0 auto 50px;
+		@media (max-width: 768px) {
+			font-size: 18px;
+			margin: 0 auto 30px;
+		}
+		@media (max-width: 500px) {
+			font-size: 14px;
+			margin-bottom: 20px;
+		}
+	}
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 30px;
+		margin-bottom: 70px;
+		@media (max-width: 1200px) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		@media (max-width: 950px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: 650px) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+	&__item {
+		box-shadow: 0 10px 60px 0 rgba(0, 0, 0, 0.5);
+		background: var(--primary-dark);
+		border-radius: 15px;
+		height: 150px;
+		color: var(--primary-light);
+		padding: 20px 20px 31px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		cursor: pointer;
+		@media (max-width: 400px) {
+			font-size: 12px;
+		}
+	}
+	&__item__price_wrap {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__item__wrap {
+		padding: 2px;
+		background: transparent;
+		border-radius: 15px;
+		transition: background 0.3s;
+	}
+	&__item__wrap_active {
+		background: linear-gradient(115deg, #60f 0%, #a358e8 100%);
+		border-radius: 15px;
+		padding: 2px;
+		.services__item__title,
+		.services__item__waiting,
+		.services__item__price {
+			@include gradient-color;
+			transition: all 0.9s;
+		}
+	}
+}

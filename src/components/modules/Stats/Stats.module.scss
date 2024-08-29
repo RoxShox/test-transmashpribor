@@ -1,0 +1,84 @@
+@import "../../../style/mixins.scss";
+.stats {
+	padding: 74px 0;
+	box-shadow: 0 0 100px 0 rgba(0, 0, 0, 0.45);
+	background: linear-gradient(131deg, #292929 29.55%, #444 100%);
+	@media (max-width: 768px) {
+		padding: 30px 0;
+	}
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		column-gap: 87px;
+		@media (max-width: 768px) {
+			flex-direction: column-reverse;
+			row-gap: 20px;
+		}
+	}
+	&__description {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 170%;
+		color: var(--primary-light);
+		border-left: 3px solid var(--primary-light);
+		padding-left: 13px;
+		@media (max-width: 600px) {
+			font-size: 12px;
+		}
+	}
+	&__right_item {
+		@media (max-width: 768px) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	&__circle_wrap {
+		width: 210px;
+		height: 210px;
+		border-radius: 100%;
+		background: linear-gradient(-5deg, #60f 0%, #a358e8 100%);
+		box-shadow: 0 0 40px 0 rgba(102, 0, 255, 0.4);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 20px;
+		@media (max-width: 500px) {
+			width: 130px;
+			height: 130px;
+		}
+	}
+	&__circle {
+		width: 170px;
+		height: 170px;
+		border-radius: 100%;
+		background: #2a2a2a;
+		box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@media (max-width: 500px) {
+			width: 106px;
+			height: 106px;
+		}
+	}
+	&__circle__value {
+		font-size: 46px;
+		@include gradient-color;
+		@media (max-width: 600px) {
+			font-size: 20px;
+		}
+	}
+	&__circle__title {
+		font-size: 18px;
+		text-transform: uppercase;
+		text-align: center;
+		@media (max-width: 500px) {
+			font-size: 12px;
+			max-width: 130px;
+		}
+	}
+}

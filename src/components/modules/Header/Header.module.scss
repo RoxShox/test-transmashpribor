@@ -1,0 +1,134 @@
+@import "../../../style/mixins.scss";
+.header {
+	padding-top: 30px;
+	margin-bottom: 67px;
+	@media (max-width: 1200px) {
+		margin-bottom: 0;
+	}
+	@media (max-width: 768px) {
+		padding-top: 0;
+	}
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@media (max-width: 768px) {
+			height: 60px;
+			box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2);
+			background: linear-gradient(131deg, #292929 29.55%, #3c3c3c 100%);
+			margin: 0 -25px;
+			padding: 0 25px;
+		}
+	}
+	&__logo {
+		@media (max-width: 768px) {
+			width: 122px;
+		}
+	}
+	&__links {
+		display: flex;
+		align-items: center;
+		column-gap: 65px;
+		@media (max-width: 1200px) {
+			column-gap: 20px;
+		}
+	}
+	&__menu_list {
+		display: flex;
+		align-items: center;
+		column-gap: 16px;
+	}
+	&__menu_item {
+		transition: color 0.3s;
+		&:hover {
+			color: var(--decor-color);
+			transition: color 0.3s;
+		}
+	}
+	&__callback_wrap {
+		display: flex;
+		column-gap: 26px;
+		align-items: center;
+	}
+	&__phone {
+		font-size: 28px;
+		@media (max-width: 1200px) {
+			font-size: 22px;
+		}
+	}
+	&__btn {
+		position: relative;
+		background: transparent;
+		border: none;
+		width: 230px;
+		height: 61px;
+		@media (max-width: 1024px) {
+			display: none;
+		}
+	}
+	&__btn_text {
+		@include gradient-color;
+	}
+	&__btn_border {
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	&__burger_menu {
+		background: none;
+		border: none;
+		display: flex;
+		flex-direction: column;
+		row-gap: 5px;
+		span {
+			display: inline-block;
+			width: 40px;
+			height: 3px;
+			background: #9874ff;
+		}
+	}
+	.mobile__menu {
+		position: fixed;
+		width: 100vw;
+		height: 100vh;
+		left: 0;
+		top: 0;
+		transform: translate(-130%);
+		transition: all 0.2s;
+		z-index: 10;
+	}
+	.mobile__menu.active {
+		transform: translate(0);
+	}
+
+	.mobile__menu__content {
+		width: 100%;
+		height: 100vh;
+		transition: all 0.2s;
+		background-color: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+	.mobile__menu__item {
+		color: #000;
+		font-family: Intro, sans-serif;
+		font-size: 30px;
+		text-transform: uppercase;
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+	.mobile__btn_close {
+		position: absolute;
+		background: none;
+		border: none;
+		font-size: 48px;
+		top: 50px;
+		right: 50px;
+		color: #000;
+		font-family: Intro, sans-serif;
+	}
+}

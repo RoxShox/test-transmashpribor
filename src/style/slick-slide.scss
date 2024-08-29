@@ -1,0 +1,25 @@
+.work {
+	.slick-list {
+		overflow: visible;
+	}
+	.slick-track {
+		display: flex;
+	}
+	.slick-slide:not(:last-child) {
+		margin-right: 10px;
+	}
+}
+
+.reviews {
+	@media (max-width: 1300px) {
+		.slick-list {
+			overflow: visible;
+		}
+		.slick-track {
+			display: flex;
+		}
+		.slick-slide:not(:last-child) {
+			margin-right: 10px;
+		}
+	}
+}

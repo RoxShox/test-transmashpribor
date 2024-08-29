@@ -1,0 +1,25 @@
+.main_sqreen__wrap {
+	position: relative;
+	overflow: hidden;
+	&::before {
+		content: "";
+		position: absolute;
+		background-image: url("../../../assets/img/main-bg-decor.svg");
+		width: 100%;
+		height: 100%;
+		top: 0;
+		right: 0;
+		z-index: -1;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		background-image: url("../../../assets/img/main-sqreen-gradient.svg");
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+}
